@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     {% load static tailwind_tags %}
-    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% tailwind_css %}
+        <script type="text/javascript" defer src="{% static "tioze.js"%}"></script>
+        <script src="https://kit.fontawesome.com/e14dbd292a.js" crossorigin="anonymous"></script>
+        
+        
         <title>Home</title>
-    </head> 
-    {% load static %}
-    <body class="bg-white">
-        <div id="nav" class="bg-white flex justify-between items-center content-center py-2 px-6 pr-10"> 
-            <img src="{% static 'img/logo.png' %}" alt="Not found" class="w-36 h-24 bg-red-600 ">
-            <div class="flex justify-between space-x-20">
-                <a class="text-xl" href="/">Home</a>
-                <a class="text-xl" href="/historia">História</a>
-                <a class="text-xl" href="/produtos">Produtos</a>
-                <a class="text-xl" href="/contactos">Contactos</a>
-            {% if user.is_authenticated %}
-                <a class="text-xl" href="/logout">Logout</a>
-            {% else %}
-                <a class="text-xl" href="/login">Login</a>
-            {% endif %}
-            </div>
-        </div>
-            {% block content %}
-            {% endblock content %}
+        
+    </head>
 
+    <link rel="icon" type="image/png" href="{% static "/img/logo.png" %}">
+    
+    {% load static %}
+    
+        <div id="nav" class="border-b-4 bg-white flex justify-between items-center content-center px-5 py-3 overflow-y-hidden"> 
+
+            <img src="{% static 'img/logo.png' %}" alt="Not found" class="w-32 h-24  bg-red-600 ">
+            <div class="flex flex-col">
+                <button id="navOpen" class="md:hidden p-2">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </button>
+                <div id="nav-links" class="hidden flex-col md:flex md:flex-row justify-between text-center  absolute top-[120px] left-0 right-0 bg-green-900 text-white md:text-black md:bg-white md:static md:top-0 lg:gap-x-32 gap-x-20 md:gap-y-0 max-h-0 py-0">
+                    <a class="text-xl" href="/">Home</a>
+                    <a class="text-xl" href="/historia">História</a>
+                    <a class="text-xl" href="/produtos/Presunto">Produtos</a>
+                    <a class="text-xl" href="/contactos">Contactos</a>
+                </div>
+            </div>
+            
+            
+        </div>
+    <body class="bg-white">
+        {% block content %}
+        {% endblock content %}
+        <div class="h-[300px] ml-5">
+       All Rights reserved
+        </div>
+        
     </body>
+    
 </html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {% load static %}
+    <div class="flex flex-col md:flex-row xl:mx-24 mx-12 my-5 ">
+        <div class="flex shrink">
+            <img src="{% static "" %}{{product.imagePath}}.png" alt="{{product.name}}">
+        </div>
+        <div class="flex shrink-[2] flex-col p-4 items-center gap-y-4 w-full min-w-[250px]">
+            <h1 class="text-4xl">{{product.name}}</h1>
+            <h2 class="text-2xl">Descrição: {{product.description}}</h2>
+            <div class="flex">
+                <button id="openNutri" class="bg-blue-400 p-2 rounded-lg hover:bg-blue-600">Informação Nutricional</button>
+                <dialog id="modal" class="p-5 backdrop:bg-white/45 rounded-m">
+                    <div class="flex flex-col gap-y-6 max-w-[300px]">
+                        <h1 class="text-2xl font-bold">Informações nutricionais:</h1>
+                        <h2 class="text-wrap text-justify text">{{product.nutInfo}} Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil, aspernatur laboriosam ullam ab eius maxime repellendus! Iure facere obcaecati laboriosam dolore mollitia quia harum, eveniet quam maxime ullam fugit, eligendi ipsa tempora incidunt error. Sequi non voluptas molestiae reprehenderit fugiat veniam voluptatum, consectetur consequuntur accusantium soluta explicabo consequatur repellendus.
+                        </h2>
+                        <div class="flex justify-center"> 
+                            <button o id="closeNutri" class="bg-blue-400 p-2 rounded w-3/5 hover:bg-blue-600">Close</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
