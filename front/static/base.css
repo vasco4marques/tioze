@@ -1,0 +1,121 @@
+/* BASE.HTML ------------- */
+
+body{
+   margin-left:1.25rem;
+   margin-right:1.25rem; 
+}
+#nav {
+    border-bottom-style: solid;
+    border-bottom-width:4px;
+    border-color: #8a8888;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    align-content: center;
+    padding:1.25rem 1.25rem;
+    overflow-y: hidden;
+}
+
+#nav img{
+    width: 8rem;
+    height:6rem;
+    flex-shrink: 0;
+}
+
+#nav-right{
+    display:flex;
+    flex-direction: column;
+}
+#nav-right #navOpen{
+    display:none;
+    padding:0.5rem;
+}
+
+#nav-links{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: white;
+    position: static;
+    top:0px;
+    row-gap:0px;
+    column-gap:8rem;
+}
+
+/* Todas as a tags são para ser assim */
+a {
+    text-decoration: none;
+    color:black;
+    font-size :1.75rem;
+    line-height:2.25rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width:1024px) {
+    #nav-links{
+        column-gap:4rem;
+    }
+}
+
+@media screen and (max-width:400px){
+    
+    #nav-links{
+        
+    }
+
+
+    #nav-right #navOpen{
+        display:block;  
+    }
+
+    #nav-links{
+        column-gap:0;
+        flex-direction: column;
+        max-height: 0px;
+    }
+}
+
+#rights{
+    height:300px;
+}
+
+
+
+
+
+/* -------- BASE.HTML */
+
+/* PRODUTOS.HTML ------------ */
+
+#produtos{
+    display:flex;
+    min-height: 1200px;
+    margin:1.25rem 1.25rem 1.25rem 1.2rem;
+}
+
+#produtos #filtro-tipos{
+    display:flex;
+    flex-direction:column;
+    vertical-align:top;
+    align-items: center;
+    flex-shrink: 1;
+    width: 18rem;
+    background-color: rgb(161 161 170);
+    row-gap:2rem;
+    padding-top:3rem;
+    margin-right:1.25rem;
+}
+
+#produtos #produtos-list {
+    margin:2rem;
+}
+
+
+
+
+
+/* ---------- PRODUTOS.HTML */
