@@ -7,39 +7,44 @@
         <script type="text/javascript" defer src="{% static "tioze.js"%}"></script>
         <script src="https://kit.fontawesome.com/e14dbd292a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/static/base.css" type="text/css">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Home</title>
         
     </head>
 
     <link rel="icon" type="image/png" href="{% static "/img/logo.png" %}">
     
-    
-    
-        <div id="nav" > 
+    <body>
+        <nav id="nav">
             <img src="{% static 'img/logo.png' %}" alt="Not found">
             
             <div id="nav-right">
                 <button id="navOpen">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </button>
-                <div id="nav-links" class="hidden flex-col md:flex md:flex-row justify-between text-center  absolute top-[120px] left-0 right-0 text-white md:text-black md:bg-white md:static md:top-0 lg:gap-x-32 gap-x-20 md:gap-y-0 max-h-0 py-0">
-                    <a class="text-xl" href="/">Home</a>
-                    <a class="text-xl" href="/historia">História</a>
-                    <a class="text-xl" href="/produtos/Presunto">Produtos</a>
-                    <a class="text-xl" href="/contactos">Contactos</a>
+                <ul id="nav-links">
+                    <li><a class="text-xl" href="/">Home</a></li>
+                    <li><a class="text-xl" href="/historia">História</a></li>
+                    <li><a class="text-xl" href="/produtos/Presunto">Produtos</a></li>
+                    <li><a class="text-xl" href="/contactos">Contactos</a></li>
+                </ul>
                 </div>
             </div>
-            
-            
-        </div>
-    <body class="bg-white">
-        {% block content %}
-        {% endblock content %}
-        <div class="h-[300px] ml-5">
-       All Rights reserved
-        </div>
+        </nav>
         
+            {% block content %}
+            {% endblock content %}
+    
     </body>
+        <footer>
+            <div class="h-[300px] ml-5">
+            All Rights reserved
+            </div>
+        </footer>
+       
+        
+    
     
 </html>

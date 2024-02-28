@@ -13,8 +13,6 @@ function colorChange(){
     } 
 }
 
-
-
 // ----- Modal informação nutricional -----
 const openNutri = document.querySelector("#openNutri");
 if (openNutri != null){
@@ -48,34 +46,51 @@ if(openNav != null){
 
 const div = document.querySelector("#nav-links");
 if(div != null){
-    div.style.transition = "all 0.5s"
     div.addEventListener('click', hide);
 }
 
 
 function sidebar(){
     const div = document.querySelector("#nav-links");
+
     if(div.style.maxHeight == "0px" || div.style.maxHeight == ""){
-        div.style.display = "flex";
         div.style.maxHeight = "204px";
-        div.style.paddingTop = "1rem";
-        div.style.paddingBottom = "1rem";
-        div.style.rowGap = "20px"
+        div.style.paddingTop="1rem";
+        div.style.paddingBottom="1rem";
     }else if(div.style.maxHeight=="204px"){
-        div.style.display = "none";
-        div.style.maxHeight = "0px";
-        div.style.paddingTop = "0px";
-        div.style.paddingBottom = "0px";
-        div.style.rowGap = "0px"
+        div.style.maxHeight = "";
+        div.style.paddingTop="0rem";
+        div.style.paddingBottom="0rem";
+
     }
-};
+}
 
 function hide(){
     const div = document.querySelector("#nav-links");
-    div.style.display = "none";
-    div.style.maxHeight = "0px";
-    div.style.paddingTop = "0px";
-    div.style.paddingBottom = "0px";
-    div.style.rowGap = "0px"
+    div.style.maxHeight = "";
+    div.style.paddingTop="0rem";
+    div.style.paddingBottom="0rem";
 }
 
+const filterButton = document.querySelector("#filter-button");
+filterButton.addEventListener('click',toggleFilter)
+
+function toggleFilter(){
+    
+    const div = document.querySelector("#filtros");
+    const produtos= document.querySelector("#produtos-list")
+    const icon = document.querySelector("#icon");
+
+
+    if(div.style.maxWidth == ""){
+        div.style.maxWidth="0px";
+        div.style.marginRight="0px";
+        produtos.style.margin="0 1rem 1rem 0"
+        icon.style.transform = "rotate(-90deg)";
+    }else if(div.style.maxWidth == "0px"){
+        div.style.maxWidth="";
+        div.style.marginRight="";
+        div.style.margin="";
+        icon.style.transform = "";
+    }
+}

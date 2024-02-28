@@ -5,30 +5,35 @@
 
 {% block content %}
 {% load static %}
-    <div id="produtos" class="flex min-h-[1200px] mx-5">
-        <div id="filtro-tipos" class="flex flex-col align-top items-center shrink w-72 bg-zinc-400 gap-y-8 pt-12">
-            {% for tipo in tipos %}
-                {% if escolhido == tipo.name %}
-                    <a href="/produtos/{{ tipo.name}}" class="text-2xl font-bold">{{tipo.name}}</a>
-                {% else %}
-                    <a href="/produtos/{{ tipo.name}}" class="text-2xl">{{tipo.name}}</a>
-                {% endif %}
-            {% endfor %}          
-        </div>
-        <div id="produtos-list" class="m-4 grid xl:grid-cols-2 2xl:grid-cols-3 gap-3 shrink-0">
-            {% for product in lista %}
-                {% if product.inView == True %}
-                <a href="/produto/{{product.name|cleanURL}}" >
-                    <div class="flex flex-col  border-black border-2 hover:border-green-900 max-w-[475px] w-auto  md:h-[204px]">
-                        <img class="w-[250px] h-[200px]" src="{% static "" %}{{product.imagePath}}.png" alt="{{product.imagePath.}}">
-                        <div class="mx-4 flex flex-col justify-center items-center gap-y-4 w-auto">
+    
+    <div id="content">
+        <button id="filter-button">
+            <p><i class="fa-solid fa-filter"></i> Filtros <i id="icon" class="fa-solid fa-chevron-down  fa-xs"></i> </p>
+        </button>
+
+        <div id="filtros-produtos" class="flex min-h-[1200px] mx-5">
+                <div id="filtros">
+                    {% for tipo in tipos %}
+                        {% if escolhido == tipo.name %}
+                            <a id="selected" href="/produtos/{{ tipo.name}}" class="text-2xl font-bold">{{tipo.name}}</a>
+                        {% else %}
+                            <a id="normal" href="/produtos/{{ tipo.name}}" class="text-2xl">{{tipo.name}}</a>
+                        {% endif %}
+                    {% endfor %}          
+                </div>
+
+            <div id="produtos-list" class="m-4 grid xl:grid-cols-2 2xl:grid-cols-3 gap-3 shrink-0">
+                {% for product in lista %}
+                    {% if product.inView == True %}
+                    <a href="/produto/{{product.name|cleanURL}}" >
+                        <div id="produto">
+                            <img class="w-[250px] h-[200px]" src="{% static "" %}{{product.imagePath}}.png" alt="{{product.imagePath.}}">
                             <p>{{product.name}}</p>
-                            <p>{{product.description}}</p>
                         </div>
-                    </div>
-                </a>
-                {% endif %}    
-            {% endfor %}
+                    </a>
+                    {% endif %}    
+                {% endfor %}
+            </div>
         </div>
     </div>
     
