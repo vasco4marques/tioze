@@ -7,17 +7,21 @@
 
 /* BASE.HTML ------------- */
 
+*{
+    font-family: "Montserrat", sans-serif;
+}
 
 body{
    margin-left:1.25rem;
-   margin-right:1.25rem; 
+   margin-right:1.25rem;
+   background: linear-gradient(to bottom, white 30%, rgb(197, 197, 197));
+   background-attachment: fixed;
 }
 
 #nav {
     border-bottom-style: solid;
     border-bottom-width:4px;
     border-color: #8a8888;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -134,114 +138,3 @@ p{
 
 /* -------- BASE.HTML */
 
-/* PRODUTOS.HTML ------------ */
-
-#content{
-    display:flex;
-    flex-direction: column;
-    margin-left:5rem;
-    margin-right:5rem;
-}
-
-#filtros-produtos{
-    display:flex;
-    min-height: 1200px;
-    margin:0rem 1.25rem 1.25rem 1.25rem;
-}
-
-#filter-button{
-    border:none;
-    background-color: transparent;  
-    width: 100%; 
-    display: flex;
-    justify-content: flex-start;
-}
-#filter-button:hover{
-    cursor: pointer;
-}
-#icon{
-    transition: all 0.5s;
-}
-
-#filtros{
-    display:flex;
-    flex-direction:column;
-    vertical-align:top;
-    align-items: center;
-    flex-shrink: 1;
-    max-width:300px;
-    width: 100%;
-    background-color: rgb(161 161 170);
-    row-gap:2rem;
-    padding-top:1rem;
-    margin-right:1.25rem;
-    height: inherit;
-    transition: all 0.5s;
-    overflow: hidden;
-}
-
-#normal {
-    font-size:1.25rem;
-    font-weight:300;  
-}
-
-#selected{
-    font-size:1.25rem;
-    font-weight: 700;
-}
-
-#produtos-list {
-    margin:0 1rem 1rem 0rem;
-    display:grid;
-    column-gap:0.75rem;
-    row-gap: 0.75rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 100%;
-}
-
-#produtos-list a {
-    display:block;
-    width:fit-content;
-}
-
-#produto{
-    display:flex;
-    flex-direction: column;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    max-width: 300px;
-    flex-shrink: 1;
-}
-
-#produto:hover{
-    border-color:var(--dark-green);
-}
-
-#produto img{
-    max-width: 300px;
-    max-height: 250px;
-    flex-shrink: 1;
-}
-
-#produto p{
-    text-overflow: ellipsis;
-}
-
-
-
-
-@media screen and (max-width:1450px){
-    #produtos-list{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media screen and (max-width:750px){
-    #produto{
-        height: 204px;
-    }
-
-}
-
-/* ---------- PRODUTOS.HTML */

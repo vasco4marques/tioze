@@ -19,3 +19,7 @@ def showProdutos(request,tipo):
 def produto(request,produto):
     value = Produto.objects.get(name=(produto.replace("-"," ",2).replace("-","/")))
     return render(request,"produto.html",{"product":value})
+
+
+def noPageFound(request):
+    return render(request,"noPageFound.html",{})

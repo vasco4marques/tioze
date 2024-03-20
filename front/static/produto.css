@@ -1,0 +1,115 @@
+/* PRODUTO.HTML ---------- */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 1.25rem 6rem;
+}
+
+.img{
+    display: flex;
+    flex-shrink: 1;
+}
+
+.img img{
+    width: 650px;
+    height: 500px;
+}
+
+.contents{
+    display: flex;
+    flex-shrink: 2;
+    flex-direction:column;
+    padding:1rem;
+    align-items: center;
+    row-gap:1rem;
+    width: 100%;
+    min-width: 250px;
+}
+
+.contents h1{
+    font-size:2.25rem;
+    line-height: 2.5rem;
+}
+
+.contents h2{
+    font-size:1.5rem;
+    line-height: 2rem;
+}
+
+.button-content{
+    display:flex;
+}
+
+#openNutri{
+    background-color: rgb(96 165 250);
+    padding:0.5rem;
+    border-radius: 0.5rem;
+}
+
+#openNutri:hover{
+    background-color: rgb(37 99 235);
+}
+
+#modal{
+    padding:1.25rem;
+    border-radius:0.5rem;
+}
+
+#modal::backdrop{
+    background-color: rgb(255 255 255 / 0.45)
+}
+
+
+#modal-content{
+    display: flex;
+    flex-direction: column;
+    row-gap:1.5rem;
+    max-width: 300px;
+}
+
+#modal-content h1{
+    font-size:1.75rem;
+    line-height: 2rem;
+    
+}
+
+#modal-content h2{
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    text-wrap: wrap;
+    text-align: justify;
+}
+
+#button-container{
+    display:flex;
+    justify-content: center;
+}
+
+#closeNutri{
+    background-color: rgb(96 165 250);
+    padding:0.5rem;
+    border-radius:0.25rem;
+    width:60%;
+}
+
+#closeNutri:hover{
+    background-color: rgb(37 99 235);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- PRODUTO.HTML */

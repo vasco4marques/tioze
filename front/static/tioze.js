@@ -85,12 +85,10 @@ function toggleFilter(){
     if(div.style.maxWidth == ""){
         div.style.maxWidth="0px";
         div.style.marginRight="0px";
-        produtos.style.margin="0 1rem 1rem 0"
         icon.style.transform = "rotate(-90deg)";
     }else if(div.style.maxWidth == "0px"){
         div.style.maxWidth="";
         div.style.marginRight="";
-        div.style.margin="";
         icon.style.transform = "";
     }
 }
