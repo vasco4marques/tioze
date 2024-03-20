@@ -6,7 +6,9 @@ urlpatterns = [
     path("historia",views.historia,name="historia"),
     path("produtos/<str:tipo>",views.showProdutos, name="produtos"),
     path("produto/<str:produto>",views.produto,name="produto"),
+    path("contactos/", views.contactos, name="contactos"),
     re_path(r'^.*/$', views.noPageFound, name="noPageFound")
+
 ]
 
 

@@ -1,0 +1,16 @@
+.contacts-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 4rem 0rem;
+}
+
+.contacts-content p:hover, p *:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contacts-content iframe{
+    margin:1rem 0rem;
+}

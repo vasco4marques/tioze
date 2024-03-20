@@ -1,4 +1,4 @@
-.content{
+.notFound-content{
     color:red;
     text-shadow: 1px 1px 2px black;
     width: 100%;
@@ -10,12 +10,12 @@
 
 }
 
-.content h1 {
+.notFound-content h1 {
     font-size :2.25rem;
     line-height:2.75rem;
 }
 
-.content h2{
+.notFound-content h2{
     font-size :1.75rem;
     line-height:2.25rem;
 }

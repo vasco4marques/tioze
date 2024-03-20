@@ -21,5 +21,8 @@ def produto(request,produto):
     return render(request,"produto.html",{"product":value})
 
 
+def contactos(request):
+    return render(request, "contactos.html",{})
+
 def noPageFound(request):
     return render(request,"noPageFound.html",{})
